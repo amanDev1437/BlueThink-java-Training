@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver" >
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="connection.url">
+            jdbc:mysql://localhost:3306/hotel
+        </property>
+
+        <property name="connection.user">root</property>
+        <property name="connection.password">tiger</property>
+
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="dialect">
+            org.hibernate.dialect.MySQL8Dialect
+        </property>
+
+        <mapping class="org.example.Student"/>
+        <mapping class="org.example.Address"/>
+        <mapping class="org.example.mapping.Question"/>
+        <mapping class="org.example.mapping.Answer"/>
+        <mapping class="org.example.mapping.NewStudent"/>
+        <mapping class="org.example.mapping.Course"/>
+        <mapping class="org.example.mapping.Employee"/>
+        <mapping class="org.example.mapping.Project"/>
+    </session-factory>
+    
+</hibernate-configuration>
+
+
+
